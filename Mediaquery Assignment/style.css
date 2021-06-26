@@ -1,0 +1,12 @@
+h1 {
+  text-align: center;
+  color: antiquewhite;
+}
+p {
+  background-color: blue;
+}
+@media (max-width: 600px) {
+  p {
+    background-color: lightgreen;
+  }
+}
