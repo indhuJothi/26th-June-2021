@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+  color: aqua;
+  line-height: 50px;
+}
+p::first-letter {
+  text-transform: capitalize;
+  background-color: seashell;
+}
+
+a:link {
+  color: blue;
+}
+a:visited {
+  color: darkgreen;
+}
+a:hover {
+  color: red;
+}
+div {
+  width: 50%;
+  border: 1px solid black;
+  height: 40px;
+  text-align: left;
+}
+.para {
+  white-space: nowrap;
+  animation-name: example;
+  animation-iteration-count: infinite;
+  animation-duration: 6s;
+}
+
+@-webkit-keyframes example {
+  50% {
+    margin-left: 80%;
+  }
+  80% {
+    margin-right: 80%;
+  }
+}
