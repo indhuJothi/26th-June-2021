@@ -153,7 +153,8 @@ function res(){
     }
     if(document.getElementById('roundwaytraveltype').checked)
     {
-    if(Date2==""){
+    if(Date2=="")
+    {
         printErr('retErr','Please enter your return Journey Date');
     }
     else{
@@ -183,7 +184,7 @@ else
     if((startDate===returnDate) && (startMonth===returnMonth) && (startYear===returnYear))
     {
        
-        alert('Starting Date and Returning Should not be same');
+        alert('Start Date and Return DateShould not be same');
         retErr=true;
         dateErr=true;
         
