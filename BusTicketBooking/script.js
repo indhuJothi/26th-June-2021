@@ -184,24 +184,32 @@ else
     if((startDate===returnDate) && (startMonth===returnMonth) && (startYear===returnYear))
     {
        
-        alert('Start Date and Return DateShould not be same');
-        retErr=true;
-        dateErr=true;
+        alert('Starting Date and Returning Should not be same');
+         return  retErr=true;
+       return dateErr=true;
         
     }
-    if((startDate>returnDate) || (startYear>=returnYear))
+    else if(startDate>=returnDate)
     {
-        if(startMonth>returnMonth)
+       if (startYear>=returnYear)
         {
+           if (startMonth>=returnMonth){
            
          alert('invalid!');
-         retErr=true;
-         dateErr=true;
+        return retErr=true;
+         return dateErr=true;
         
         }
-        
-        
     }
+}
+     else if(startYear>=returnYear){
+            if(startMonth>returnMonth){
+                alert('invalid!');
+                return retErr=true;
+                 return dateErr=true;
+            }
+        }
+        
     let year=dob.getFullYear();
     let TodayDate=new Date();
     let TodayYear=TodayDate.getFullYear();
@@ -234,12 +242,14 @@ else
         document.querySelector('body').style.backgroundImage='none';
          document.getElementById('form').style.display='none';  
          document.getElementById('result').innerHTML=`you have entered the following details: <div> Traveltype: ${oneway}</div>`+datas;
+           document.getElementById('heading').innerHTML="Booked"
       }
     else{
         var roundwaydatas=datas+`End Date: ${Date2}`;
         document.querySelector('body').style.backgroundImage='none';
          document.getElementById('form').style.display='none';  
          document.getElementById('result').innerHTML=`you have entered the following details: <div> Traveltype: ${roundway}</div>`+roundwaydatas;
+           document.getElementById('heading').innerHTML="Booked"
 
     }
     
